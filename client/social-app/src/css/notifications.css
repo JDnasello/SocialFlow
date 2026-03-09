@@ -1,0 +1,238 @@
+.container-home {
+    position: relative;
+}
+
+.container-home .empty-notifications {
+    position: absolute;
+    top: 45%;
+    width: 100%;
+    font-size: 1.2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #b8b8b8;
+}
+
+.container-home .container-delete-all {
+    text-align: end;
+    padding: 10px 15px 15px 0;
+    border-top: 1px solid #4242428a;
+}
+
+.container-home .container-delete-all .delete-all {
+    padding: 10px 20px;
+    border-radius: 20px;
+    border: none;
+    background-color: var(--color-preference);
+    color: #fff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container-home .delete-all:hover {
+    opacity: .8;
+}
+
+.container-info-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 10px 0;
+}
+
+.info-btn {
+    padding: 12px;
+    background-color: var(--color-preference);
+    color: #fff;
+    border: none;
+    border-radius: 20px;
+    box-shadow: 2px 5px 10px rgba(0, 0, 0, .5);
+    cursor: pointer;
+}
+
+.container-notification {
+    position: relative;
+    border-bottom: 1px solid #4242428a;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.container-notification:hover {
+    background-color: #ffffff18;
+}
+
+.notification {
+    padding: 25px 15px 25px 20px;
+    display: flex;
+    gap: 12px;
+}
+
+.notification.unread {
+    background-color: var(--color-preference-most-worn-out);
+}
+
+.notification .notification-circle {
+    position: absolute;
+    top: 39px;
+    left: 8px;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: var(--color-preference);
+}
+
+.notification-user-photo {
+    margin-left: 5px;
+}
+
+.notification-user-photo a {
+    text-decoration: none;
+}
+
+.notification-user-photo a img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.notification-text {
+    width: 100%;
+}
+
+.notification-text.center {
+    margin: auto 0;
+}
+
+.notification-text .notification-post {
+    background-color: #041627;
+    border-radius: 10px;
+    border: 1px solid #4242428a;
+    display: flex;
+    margin-top: 10px;
+    padding: 8px;
+    gap: 10px;
+    max-height: 200px;
+}
+
+.notification-text .notification-post .notification-post-profile-photo img,
+.notification-post-comment .notification-comment .notification-post-profile-photo img {
+    width: 35px;
+    border-radius: 50%;
+}
+
+.notification-post .notification-content {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.notification-content .files div {
+    max-height: 70px;
+}
+
+.notification-text .notification-post p,
+.notification-post-comment .notification-comment p {
+    width: 100%;
+    margin: auto 0;
+    word-break: break-all;
+}
+
+.notification-date-and-delete {
+    color: #c5c5c5d3;
+    font-size: .8em;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    min-width: max-content;
+}
+
+.notification-date-and-delete span {
+    margin-right: 5px;
+}
+
+.notification-date-and-delete svg {
+    font-size: 23px;
+    align-self: flex-end;
+}
+
+/* Estilos para comentarios de un post */
+
+.notification-post-comment {
+    display: flex;
+    flex-direction: column;
+    border: 1px solid #4242428a;
+    margin-top: 10px;
+    border-radius: 10px;
+    overflow: hidden;
+}
+
+.notification-post-comment .notification-post, .notification-comment {
+    padding: 8px;
+    display: flex;
+    gap: 10px;
+    border: none;
+    border-radius: 0;
+}
+
+.notification-post-comment .notification-comment {
+    background-color: #0b243a;
+    border-bottom: 1px solid #4242428a;
+}
+
+.notification-post-comment .notification-post {
+    margin-top: 0;
+    border-top: none;
+    color: #c5c5c5d3;
+    font-size: .9em;
+}
+
+.container-undo {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-undo .undo-txt {
+    margin-left: 20px;
+}
+
+.container-undo button {
+    margin-right: 20px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    border: none;
+    border-radius: 5px;
+    padding: 3px 5px;
+    background-color: #29415a;
+    color: #e4e3e3;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.container-undo button svg, .container-undo button span {
+    color: #fff;
+}
+
+.container-undo button span {
+    margin-right: 3px;
+}
+
+@media screen and (min-width: 768px) {
+    .notification {
+        padding: 25px 15px 25px 40px;
+    }
+
+    .notification .notification-circle {
+        top: 45px;
+        left: 15px;
+    }
+
+    .notification-user-photo {
+        margin: 0;
+    }
+
+    .notification-user-photo a img {
+        width: 50px;
+    }
+}

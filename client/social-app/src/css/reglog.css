@@ -1,0 +1,860 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@500;600&family=Roboto:wght@300;400;700&display=swap');
+
+.container {
+    padding: 10px;
+    width: 100%;
+    height: 100vh;
+    background-color: #001833;
+}
+
+.container-reglog {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 15px;
+    user-select: none;
+}
+
+.container-reglog-img{
+    display: block;
+    width: 100%;
+}
+
+.container-reglog-img img {
+    width: 50px;
+    height: auto;
+}
+
+.container-starting {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-starting .title {
+    margin: 50px 0 50px 10px;
+    font-size: 3em;
+    font-family: 'Kanit',sans-serif;
+    font-weight: 600;
+    line-height: 1.2em;
+    color: #f3f2ed;
+}
+
+.container-reglog-subtitle {
+    width: 70%;
+    margin: 0 0 20px 0;
+}
+
+.container-reglog-subtitle .subtitle {
+    font-size: 1.8em;
+    font-family: 'Kanit', sans-serif;
+    line-height: 1.1;
+    color: #f3f2ed;
+}
+
+.container-signup-in-btns {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+}
+
+.container-signup-in-btns button {
+    padding: 12px 20px;
+    width: 100%;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: .9em;
+    cursor: pointer;
+}
+
+.google-btn {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    background-color: #fff;
+    font-weight: 700;
+    font-size: .9em;
+    border-radius: 20px;
+    padding: 5px 20px 5px 10px;
+    cursor: pointer;
+}
+
+.google-btn svg {
+    width: 32px;
+    height: 32px;
+}
+
+.google-btn span {
+    margin: 0 auto;
+    color: #000;
+}
+
+.btn-signup {
+    background-color: var(--color-preference);
+    color: #002146;
+    transition: .3s;
+}
+
+.btn-signup:hover {
+    opacity: .8;
+}
+
+.separating-line {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+
+.separating-line hr {
+    width: 50%;
+    border: 1px solid #d4d4d454;
+}
+
+.separating-line p {
+    margin: 0 5px;
+    color: #fff;
+}
+
+.container-have-account {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    flex-direction: column;
+    color: #f3f2ed;
+}
+
+.container-have-account .btn-signin {
+    margin-top: 15px;
+    border: 1px solid #c5c5c5d3;
+    background-color: transparent;
+    color: var(--color-preference);
+    transition: .3s;
+}
+
+.container-have-account .btn-signin:hover {
+    background-color: var(--color-preference-most-worn-out);
+}
+
+.all-rights-reserved {
+    margin-top: 50px;
+    width: 100%;
+    text-align: center;
+}
+
+.all-rights-reserved P {
+    font-size: .8em;
+    color: #c5c5c5d3;
+}
+
+a {
+    width: 100%;
+    color: #fff;
+}
+
+/* Register Form */
+
+.register-login-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    max-width: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    background-color: #001833;
+    color: #f3f2ed;
+    z-index: 1000;
+}
+
+.register-login-container {
+    padding: 10px;
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.head {
+    height: 60px;
+    display: flex;
+    align-items: center;
+    padding: 0 10px;
+}
+
+.head .form-reglog-logo {
+    margin-bottom: 0;
+    width: 50px;
+    height: auto;
+}
+
+.head .left {
+    width: 100%;
+    text-align: left;
+}
+
+.left div {
+    width: 42px;
+    padding: 7px 7px 4px 7px;
+    text-align: center;
+    transition: .2s;
+}
+
+svg {
+    cursor: pointer;
+}
+
+.left div:hover {
+    background-color: #c5c5c54b;
+    border-radius: 10000px;
+}
+
+.head .right {
+    width: 100%;
+}
+
+.inputs-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 30px 30px 0;
+}
+
+.register-form {
+    width: 100%;
+}
+
+.inputs-container-title {
+    width: 100%;
+    text-align: start;
+}
+
+.register-login-error {
+    background-color: #f33838;
+    padding: 8px 12px;
+    margin-bottom: 20px;
+    border-radius: 3px;
+}
+
+.register-login-error span {
+    font-size: 0.9em;
+}
+
+.inputs-text {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 30px;
+    width: 100%;
+}
+
+.input-group {
+    position: relative;
+    width: 100%;
+    text-align: start;
+    display: flex;
+    flex-direction: column;
+    margin-top: 15px;
+}
+
+.input-group .pass-visibility {
+    width: 0;
+}
+
+.input-error-span {
+    position: absolute;
+    margin: 0;
+    bottom: -25px;
+    left: 0;
+}
+
+.input-group svg {
+    position: absolute;
+    right: 25px;
+    top: 19px;
+    fill: #c5c5c580;
+}
+
+.inputs-text .form-input {
+    width: 100%;
+    padding: 20px 25px;
+    font-size: 0.9em;
+    background-color: transparent;
+    border: 1px solid #c5c5c580;
+    border-radius: 3px;
+    outline: none;
+    cursor: pointer;
+    color: #fff;
+    transition: .3s;
+}
+
+.input-label {
+    color: #c5c5c580;
+    cursor: pointer;
+    position: absolute;
+    top: 50%;
+    left: 15px;
+    transform: translateY(-50%);
+    transition: .3s;
+    pointer-events: none;
+}
+
+.inputs-text .form-input:focus {
+    border-color: var(--color-preference);
+}
+
+.input-group .form-input:focus + .input-label {
+    top: 0;
+    left: 15px;
+    font-size: 0.8em;
+    padding: 0 5px;
+    background-color: #001833;
+    color: var(--color-preference);
+    border-color: var(--color-preference);
+}
+
+.input-group .form-input:not(:placeholder-shown) + .input-label, .label-active {
+    top: 0;
+    left: 15px;
+    font-size: 0.8em;
+    padding: 0 5px;
+    background-color: #001833;
+}
+
+.input-error-span {
+    color: #f33838;
+    margin-top: 10px;
+    font-size: 0.8em;
+}
+
+.birthday {
+    width: 100%;
+    margin: 25px 0 50px;
+    position: relative;
+}
+
+.birthday span:first-child {
+    position: absolute;
+    color: #c5c5c5e1;
+    top: -18px;
+}
+
+.birthdate-selects {
+    display: flex;
+    margin-top: 15px;
+}
+
+.custom-select {
+    position: relative;
+    flex: 1;
+    margin-right: 10px;
+    border: 1px solid #c5c5c580;
+}
+
+.custom-select.active {
+    border-color: var(--color-preference);
+}
+
+
+.select-label {
+    font-size: 14px;
+    color: #c5c5c580;
+    padding: 5px 0 5px 5px;
+}
+
+.select-label.active {
+    color: var(--color-preference);
+}
+
+.select-input {
+    appearance: none;
+    padding: 10px;
+    border: none;
+    font-size: 14px;
+    width: 100%;
+    background-color: transparent;
+    outline: none;
+    color: #fff;
+    cursor: pointer;
+}
+
+.select-input option {
+    background-color: #002146;
+}
+
+.select-icon {
+    position: absolute;
+    top: 60%;
+    right: 10px;
+    transform: translateY(-50%);
+    pointer-events: none;
+    width: 20px;
+    height: 20px;
+    fill: #c5c5c580;
+}
+
+.select-icon.active {
+    fill: var(--color-preference);
+}
+
+.register-login-container .goto-home {
+    width: 100%;
+    padding: 20px 30px;
+    border: none;
+    border-radius: 25px;
+    font-size: 1.2em;
+    font-weight: 700;
+    color: #002146;
+    transition: .3s;
+    cursor: pointer;
+}
+
+.register-login-container .goto-home:hover {
+    background-color: var(--color-preference);
+    color: #fff;
+}
+
+/* Login Form */
+
+.login-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 80vh;
+}
+
+.login-form h2 {
+    width: 60%;
+}
+
+.login-form .google-btn {
+    width: 60%;
+    margin: 25px 0;
+}
+
+.login-form button, .complete-user-form button {
+    padding: 12px 20px;
+    margin: 30px 0;
+    width: 60%;
+    border: none;
+    border-radius: 20px;
+    font-weight: 700;
+    font-size: .9em;
+    cursor: pointer;
+    transition: .3s;
+}
+
+.login-form .separating-line {
+    width: 60%;
+}
+
+.login-form form {
+    text-align: center;
+    width: 60%;
+    margin: 25px 0;
+}
+
+.login-form .input-group:first-child {
+    margin-top: 0;
+}
+
+.goto-home {
+    width: 100%;
+}
+
+.goto-home {
+    width: 100%;
+    transition: .3s;
+}
+
+.container-nothave-account {
+    width: 60%;
+}
+
+.container-nothave-account a {
+    color: var(--color-preference);
+    text-decoration: none;
+}
+
+.container-nothave-account a:hover {
+    text-decoration: underline;
+}
+
+/* Complete user Form */
+
+.register-login-overlay.complete-user-overlay {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+}
+
+.register-login-overlay.complete-user-overlay .complete-user-head {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    width: 100%;
+}
+
+.register-login-overlay.complete-user-overlay .complete-user-head .left {
+    position: relative;
+    width: 0;
+}
+
+.register-login-overlay.complete-user-overlay .complete-user-head .left div {
+    position: absolute;
+    top: -40px;
+    left: -60px;
+}
+
+.register-login-overlay.complete-user-overlay .complete-user-head h2 {
+    font-size: 1.7em;
+    margin: 35px 0 20px;
+}
+
+.container-complete-user {
+    width: 70%;
+    margin-top: 20px;
+}
+
+.container-complete-user h4 {
+    font-size: 1.1em;
+    color: #c5c5c5d3;
+    margin-bottom: 25px;
+}
+
+.complete-user-form {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 60px;
+}
+
+.complete-user-form .input-group:first-child {
+    margin: 0;
+}
+
+.complete-user-form .birthday {
+    margin-top: 0;
+}
+
+.complete-user-form .goto-home {
+    margin: 0;
+    width: 70%;
+    padding: 15px 20px;
+}
+
+@media screen and (min-width: 768px) {
+    .container {
+        padding: 0;
+    }
+
+    .container-reglog {
+        padding: 15px 25px;
+    }
+
+    .container-fixed {
+        position: fixed;
+        top: 0;
+        width: 100vw;
+        min-height: 100vh;
+        z-index: 100;
+    }
+
+    .container-fixed .form-mask {
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color: #6887ad6e;
+    }
+
+    .register-login-overlay {
+        width: 75%;
+        max-width: 720px;
+        min-height: 600px;
+        z-index: 100;
+        border-radius: 10px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        padding: 10px 10px 50px;
+        display: block;
+    }
+
+    .register-login-container {
+        padding: 0;
+        min-height: 100%;
+    }
+
+    .head {
+        padding: 0;
+        margin-bottom: 20px;
+    }
+
+    .head .form-reglog-logo {
+        width: 35px;
+    }
+
+    .login-form {
+        height: 100%;
+    }
+
+    .login-form form {
+        margin: 20px 0 10px;
+    }
+
+    .login-form button {
+        margin: 30px 0 20px;
+    }
+
+    .login-form .goto-home {
+        padding: 15px 25px;
+        margin: 40px 0 20px;
+    }
+
+    .inputs-container {
+        margin: 15px 10px 0;
+    }
+
+    .inputs-container-title {
+        margin-bottom: 0;
+    }
+
+    .register-form {
+        position: relative;
+    }
+
+    .register-form .inputs-text {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        grid-template-rows: auto auto auto;
+        gap: 15px;
+    }
+
+    .input-group {
+        display: block;
+        margin-top: 15px;
+    }
+
+    .input-error-span {
+        position: absolute;
+        margin: 0;
+        bottom: -25px;
+        left: 0;
+    }
+
+    .input-group:nth-child(4) {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .input-group:nth-child(5) {
+        grid-row-start: 3;
+        grid-row-end: 4;
+    }
+
+    .birthday {
+        margin: 0;
+        position: relative;
+    }
+
+    .birthday span:first-child {
+        position: absolute;
+        color: #c5c5c5e1;
+        top: -18px;
+    }
+
+    .input-group:nth-child(3), .input-group:nth-child(4), .input-group:nth-child(5), .birthday {
+        margin-top: 30px;
+    }
+
+    .birthdate-selects {
+        margin: 0;
+    }
+
+    .custom-select:first-child {
+        min-width: 72px;
+    }
+
+    .custom-select:nth-child(2) {
+        min-width: 110px;
+    }
+
+    .custom-select:last-child {
+        margin: 0;
+    }
+
+    .register-form .goto-home {
+        padding: 15px 25px;
+        width: 60%;
+        position: absolute;
+        left: 20%;
+        bottom: -110px;
+    }
+
+    .register-login-overlay.complete-user-overlay {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 600px;
+    }
+    
+    .register-login-overlay.complete-user-overlay .complete-user-head {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: relative;
+        width: 100%;
+    }
+    
+    .register-login-overlay.complete-user-overlay .complete-user-head .left {
+        position: relative;
+        width: 0;
+    }
+    
+    .register-login-overlay.complete-user-overlay .complete-user-head .left div {
+        position: absolute;
+        top: -40px;
+        left: -60px;
+    }
+    
+    .register-login-overlay.complete-user-overlay .complete-user-head h2 {
+        font-size: 1.7em;
+        margin: 35px 0 20px;
+    }
+    
+    .container-complete-user {
+        width: 70%;
+        margin-top: 20px;
+    }
+    
+    .container-complete-user h4 {
+        font-size: 1.1em;
+        color: #c5c5c5d3;
+        margin-bottom: 25px;
+    }
+    
+    .complete-user-form {
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        gap: 60px;
+    }
+    
+    .complete-user-form .input-group:first-child {
+        margin: 0;
+    }
+    
+    .complete-user-form .birthday {
+        margin-top: 0;
+    }
+    
+    .complete-user-form .goto-home {
+        margin: 0;
+        width: 70%;
+        padding: 15px 20px;
+    }
+
+}
+
+@media screen and (min-width: 1024px) {
+    .container {
+        display: flex;
+        padding: 0;
+        position: relative;
+    }
+
+    .container-reglog {
+        width: 55vw;
+        padding: 0;
+    }
+
+    .container-reglog-img {
+        padding: 0;
+        height: 100vh;
+        clip-path: polygon(0 0, 100% 0, 0 100%);
+        background-color: #002146;
+        overflow: visible;
+        z-index: 1;
+    }
+
+    .container-reglog-img img {
+        position: absolute;
+        margin: 0;
+        top: 5%;
+        left: 5%;
+        width: 250px;
+        animation: shadow 3s infinite alternate;
+    }
+
+    @keyframes shadow {
+        0% {
+            filter: drop-shadow(0 0 0 #fff);
+        }
+        100% {
+            filter: drop-shadow(0 0 4px #fff);
+        }
+    }
+
+    .container-starting {
+        position: absolute;
+        top: 25%;
+        left: 50%;
+        z-index: 100;
+        align-items: flex-start;
+        margin-right: 10px;
+    }
+
+    .container-starting .title {
+        width: 70%;
+        margin: 0 0 50px;
+        font-size: 3.5em;
+    }
+
+    .all-rights-reserved {
+        margin-top: 100px;
+        width: 70%;
+        text-align: center;
+    }
+}
+
+@media screen and (min-width: 1440px) {
+    .container-reglog {
+        width: 60vw;
+    }
+
+    .container-reglog-img img {
+        top: 11%;
+        left: 6%;
+        width: 300px;
+    }
+
+    .container-starting {
+        top: 20%;
+        left: 55%;
+    }
+
+    .container-starting .title {
+        font-size: 3.7em;
+    }
+
+    .container-reglog-subtitle .subtitle {
+        font-size: 2.5em;
+    }
+
+    .all-rights-reserved {
+        margin-top: 150px;
+    }
+}

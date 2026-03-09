@@ -1,0 +1,220 @@
+.container-profile {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.follows-nav {
+    height: 55px;
+    display: flex;
+    align-items: center;
+    border-bottom: 1px solid #4242428a;
+}
+
+.follows-nav a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    text-decoration: none;
+    border-bottom: 2px solid transparent;
+    transition: .2s;
+}
+
+.follows-nav a:hover {
+    background-color: #c5c5c52a;
+}
+
+.follows-nav .active {
+    border-bottom: 2px solid #378edf;
+}
+
+
+.container-background-without-img {
+    padding-top: 30%;
+    width: 100%;
+    background-color: #1d3b5f;
+    position: relative;
+}
+
+
+.container-background-without-img .profile-photo {
+    width: 20%;
+    height: 65%;
+    max-width: 150px;
+    max-height: 150px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 3%;
+    border: 2px solid #001833;
+    border-radius: 50%;
+    background-color: #001833;
+}
+
+.container-background-without-img .profile-photo img {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.container-background-img {
+    width: 100%;
+    padding-top: 30%;
+    position: relative;
+}
+
+.container-background-img .background-img {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
+.background-img .background {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: #1d3b5f;
+    z-index: 1;
+}
+
+.container-background-img .container-profile-photo {
+    width: 20%;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: absolute;
+    top: 60%;
+    left: 3%;
+    z-index: 2;
+}
+
+.container-background-img .profile-photo img {
+    width: 100%;
+    max-width: 135px;
+    height: 100%;
+    max-height: 132px;
+    border-radius: 50%;
+    background-color: #1d3146;
+}
+
+.edit-profile {
+    min-height: 32px;
+    width: 100%;
+    text-align: end;
+    margin: 10px 20px 0 0;
+}
+
+.edit-profile .edit-profile-btn {
+    padding: 5px 10px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    background-color: transparent;
+    color: #fff;
+    font-size: 0.9em;
+    font-weight: 600;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.edit-profile .edit-profile-btn:hover {
+    background-color: #ffffff18;
+}
+
+.container-profile-description {
+    width: 100%;
+    padding: 15px 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.profile-name-username h3 {
+    font-size: 1.5em;
+}
+
+.profile-name-username span {
+    color: #c5c5c5d3;
+}
+
+.profile-biography p, .profile-location p {
+    display: flex;
+    align-items: flex-start;
+    gap: 8px;
+}
+
+.profile-biography, .profile-location {
+    color: #c5c5c5d3;
+}
+
+.profile-biography p svg, .profile-location p svg {
+    cursor: default;
+}
+
+.date-joined span {
+    color: #c5c5c5d3;
+}
+
+.container-followscounter .followers,
+.container-followscounter .following {
+    color: #c5c5c5d3;
+    text-decoration: none;
+}
+
+.container-followscounter span:first-child {
+    margin-right: 2px;
+    color: #fff;
+    transition: .2s;
+    cursor: pointer;
+}
+
+.container-followscounter span:last-child {
+    text-decoration: underline;
+}
+
+.container-followscounter .followers {
+    margin-right: 20px;
+}
+
+.content-bar {
+    width: 100%;
+    height: 50px;
+    border-bottom: 1px solid #4242428a;
+    display: flex;
+}
+
+.content-bar .content-bar-link {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.content-bar-link a {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+}
+
+.content-bar-link div {
+    width: 60px;
+    height: 5px;
+}
+
+.content-bar-link .active ~ div {
+    background-color: var(--color-preference);
+    border-radius: 20px;
+}

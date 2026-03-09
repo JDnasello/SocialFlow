@@ -1,0 +1,217 @@
+.container-post-text {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    gap: 10px;
+    padding-right: 5px;
+}
+
+.container-post-text .post-text,
+.post-textarea {
+    width: 100%;
+    resize: none;
+    margin-bottom: 5px;
+    background-color: #001833;
+    border: none;
+    outline: none;
+    color: #fff;
+    font-size: var(--font-size-p);
+    font-weight: 300;
+}
+
+.post-textarea::placeholder {
+    color: #c5c5c5b2;
+}
+
+.container-post-text .post-files {
+    width: 100%;
+    max-height: 300px;
+}
+
+.post-files img, video {
+    width: 100%;
+    max-height: 250px;
+    cursor: pointer;
+}
+
+.container-post-text .post-separate-line {
+    width: 100%;
+    height: 1px;
+    background-color: #c5c5c53f;
+    position: relative;
+}
+
+.container-post-text .container-icons-and-btn {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 5px;
+    margin-bottom: 10px;
+}
+
+.container-post-text .container-icons-and-btn .post-btn .span-counter {
+    color: #fff;
+}
+
+.container-icons-and-btn .post-icons {
+    display: inline-flex;
+    gap: 5px;
+    margin-top: 10px;
+}
+
+.post-icons .post-icon svg:hover {
+    fill: var(--color-preference);
+}
+
+.container-emoji-picker {
+    width: 100%;
+}
+
+.emoji-picker-active:focus {
+    position: absolute;
+    top: -1%;
+}
+
+#input-file {
+    display: none;
+}
+
+.container-icons-and-btn .post-btn {
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+}
+
+.container-icons-and-btn .post-btn span {
+    margin-right: 10px;
+    font-size: 0.9em;
+}
+
+.container-icons-and-btn .post-btn button {
+    padding: 6px 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: var(--color-preference);
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9em;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.container-icons-and-btn .post-btn button:hover {
+    opacity: .9;
+}
+
+/* EditPostCard component */
+
+.container-edit-post {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #6887ad6e;
+    z-index: 100;
+}
+
+.edit-post-card {
+    width: 90%;
+    max-width: 400px;
+    padding: 10px 0 20px;
+    border-radius: 13px;
+    background-color: #001833;
+}
+
+.edit-post-card .close-icon {
+    width: 28px;
+    height: 28px;
+    margin-left: 6px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    transition: .2s;
+}
+
+.edit-post-card .close-icon:hover {
+    background-color: #c5c5c54b;
+}
+
+.edit-post-text {
+    margin: 10px 0 0 12px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.edit-post-text .post-text div .post-textarea {
+    height: 100px;
+}
+
+.post-textarea::-webkit-scrollbar {
+    background-color: #02244b;
+    width: 15px;
+}
+
+.post-textarea::-webkit-scrollbar-button {
+    background-image: url('../img/arrow-up-scrollbar.png');
+    background-repeat: no-repeat;
+    background-size: 100%;
+}
+
+.post-textarea::-webkit-scrollbar-button:end {
+    background-image: url('../img/arrow-down-scrollbar.png');
+}
+
+.edit-file-icon, .delete-file-icon {
+    position: absolute;
+    top: 8px;
+    right: 8px;
+    color: white;
+    background-color: rgba(0, 0, 0, 0.5);
+    border-radius: 50%;
+    padding: 4px;
+    height: 30px;
+    z-index: 10;
+}
+
+.edit-file-icon {
+    right: 36px;
+}
+
+.edit-post-text .container-emoji-picker {
+    width: 80%;
+    max-width: 400px;
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.edit-post-card .post-text .container-post-media {
+    border-bottom: none;
+}
+
+.files div .file-not-allowed {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: .9em;
+    color: #c5c5c5b2;
+}
+
+@media screen and (min-width: 768px) {
+    .edit-file-icon {
+        right: 52px;
+    }
+}

@@ -1,0 +1,32 @@
+.container-search-card {
+    position: absolute;
+    top: 100%;
+    height: 100vh;
+    left: 0;
+    width: 100%;
+    background-color: rgba(0, 24, 51, .98);
+    backdrop-filter: blur(4px);
+    overflow-y: auto;
+    z-index: 100;
+    transition: height .2s ease-in-out;
+}
+
+.container-search-card.search-disabled {
+    display: none;
+}
+
+.search-empty {
+    padding: 40px;
+    text-align: center;
+    font-size: 1.2em;
+}
+
+.search-empty span {
+    text-align: start;
+    line-height: 25px;
+    color: #b8b8b8;
+}
+
+.container-search-card .container-history-chat {
+    min-height: 105px;
+}

@@ -1,0 +1,163 @@
+.container-home .aside-system-preferences {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    border-top: none;
+    display: block;
+    border-left: none;
+    border-right: none;
+    border-bottom: 1px solid #4242428a;
+}
+
+.container-home .aside-system-preferences .preference-box:first-child {
+    margin-top: 10px;
+}
+
+.container-home .aside-system-preferences .preference-box {
+    height: auto;
+    padding: 12px 10px;
+    border-bottom: 1px solid #4242428a;
+}
+
+.container-home .aside-system-preferences .preference-box:nth-child(2) .preference-color {
+    margin: 10px 0;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.container-home .preference-color .color-div {
+    position: relative;
+    border-radius: 50%;
+    width: 35px;
+    height: 35px;
+    transition: .2s;
+}
+
+.container-home .preference-color .color-div .color-label {
+    position: absolute;
+    width: 35px;
+    height: 35px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.container-home .preference-color .color-div .color-label input {
+    display: none;
+}
+
+.container-home .preference-color .color-div:first-child {
+    background-color: #378edf;
+}
+
+.container-home .preference-color .color-div:nth-child(2) {
+    background-color: #6a37df;
+}
+
+.container-home .preference-color .color-div:nth-child(3) {
+    background-color: #1aac7b;
+}
+
+.container-home .preference-color .color-div:last-child {
+    background-color: #ff6f61;
+}
+
+.container-home .preference-color .color-div:first-child:hover {
+    box-shadow: 0 0 5px 5px rgba(55, 142, 223, .2);
+}
+
+.container-home .preference-color .color-div:nth-child(2):hover {
+    box-shadow: 0 0 5px 5px rgba(106, 55, 223, .2);
+}
+
+.container-home .preference-color .color-div:nth-child(3):hover {
+    box-shadow: 0 0 5px 5px rgba(26, 172, 123, .2);
+}
+
+.container-home .preference-color .color-div:last-child:hover {
+    box-shadow: 0 0 5px 5px rgba(255, 111, 97, 0.2);
+}
+
+.container-home .preference-box:last-child {
+    border-bottom: none;
+}
+
+.container-home .preference-font {
+    margin: 20px 0 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.container-home .preference-font .font-small {
+    font-size: 1em;
+}
+
+.container-home .preference-font-bar {
+    width: 100%;
+    display: flex;
+    flex-grow: 1;
+    background-color: var(--color-preference);
+    height: 4px;
+    margin: 0 15px;
+}
+
+.container-home .bar-segment {
+    flex: 1;
+    background-color: var(--color-preference-bar);
+    position: relative;
+    transition: .1s;
+}
+
+.container-home .bar-segment.active-segment {
+    background-color: var(--color-preference);
+}
+
+.container-home .bar-segment.small-segment {
+    flex: .1;
+}
+
+.container-home .bar-segment .bar-circle {
+    width: 11px;
+    height: 11px;
+    background-color: var(--color-preference-bar);
+    border-radius: 50%;
+    position: absolute;
+    top: 50%;
+    left: 100%;
+    transform: translate(-50%, -50%);
+    cursor: pointer;
+    z-index: 1;
+    transition: .1s;
+}
+
+.container-home .bar-segment .bar-circle:hover {
+    box-shadow: 0 0 1px 9px var(--color-preference-most-worn-out);
+}
+
+.container-home .bar-segment .bar-circle.circle-big {
+    width: 16px;
+    height: 16px;
+}
+
+.container-home .bar-segment .bar-circle.active-circle {
+    background-color: var(--color-preference);
+}
+
+.container-home .preference-font .font-big {
+    font-size: 1.3em;
+    padding-left: 5px;
+}
+
+.container-home .delete-account {
+    padding: 22px 10px;
+    border-bottom: 1px solid #4242428a;
+    cursor: pointer;
+    transition: .1s;
+}
+
+.container-home .delete-account:hover {
+    background-color: #ffffff18;
+}
